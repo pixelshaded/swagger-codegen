@@ -51,7 +51,7 @@ namespace {{package}} {
 {{#allParams}}
 {{#required}}
             // verify required parameter '{{paramName}}' is set
-            if (!{{paramName}}) {
+            if ({{paramName}} === null || {{paramName}} === undefined) {
                 throw new Error('Missing required parameter {{paramName}} when calling {{nickname}}');
             }
 {{/required}}
